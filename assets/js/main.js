@@ -1,47 +1,49 @@
-let api = 'https://api.listenbrainz.org/1/user/nightd/playing-now';
-
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function reload_content(url, delay){
+function reload_content(delay){
 
     setInterval(async function(){
 
+        let user = document.getElementsByTagName('input')[0].value;
+        let url = 'https://api.listenbrainz.org/1/user/' + user + '/playing-now';
+
         let payload = new Map();
-        let song = new Map();
+        let song = {'artist_name':'NO SONG', 'track_name':'Youtube Music Tracker', 'img_link':'assets/img/logo.png', 'img_id':'none'};
         let link;
         let id;
-        let response = await fetch(url);
-        let data = await response.text();
-        let jsonRAW = JSON.parse(data);
-        let jsonFile = new Map(Object.entries(jsonRAW));
-
-        
-
-        if(jsonFile.get('payload')['listens'].length > 0){
-
-            payload = jsonFile.get('payload');
-            id = payload['listens'][0]['track_metadata']['additional_info']['origin_url'];
-            id = id.substr(0,45);
-            id = id.substr(34,45);
-            link = 'https://img.youtube.com/vi/' + id + '/maxresdefault.jpg'
-            
-            song = payload['listens'][0]['track_metadata'];
-            song['img_id'] = id;
-            song['img_link'] = link;
-            data = '';
-            
-
-        }else{
-            song = {'artist_name':'NO SONG', 'track_name':'Youtube Music Tracker', 'img_link':'assets/img/yt.png', 'img_id':'none'};
-        }
-        
-
+        let response
+        let data;
+        let jsonRAW;
+        let jsonFile;
         try{
-            console.log(jsonFile.get('payload')['listens'][0]['track_metadata']);
+            response = await fetch(url);
         }catch{
-            console.log(jsonFile.get('payload')['listens'][0]);
+            console.log('Error loading content');
+        }
+        if(response.status === 200){
+            document.getElementsByTagName('p')[2].innerText = '✅';
+            data = await response.text();
+            jsonRAW = JSON.parse(data);
+            jsonFile = new Map(Object.entries(jsonRAW));
+
+            if(jsonFile.get('payload')['listens'].length > 0){
+
+                payload = jsonFile.get('payload');
+                id = payload['listens'][0]['track_metadata']['additional_info']['origin_url'];
+                id = id.substr(0,45);
+                id = id.substr(34,45);
+                link = 'https://img.youtube.com/vi/' + id + '/maxresdefault.jpg'
+                
+                song = payload['listens'][0]['track_metadata'];
+                song['img_id'] = id;
+                song['img_link'] = link;
+                data = '';
+                
+            }
+        }else{
+            document.getElementsByTagName('p')[2].innerText = '❌';
         }
 
         if(song['img_id'] != document.getElementsByTagName('img')[0].getAttribute('id')){
@@ -82,4 +84,4 @@ function reload_content(url, delay){
 
 
 
-reload_content(api, 3000);
+reload_content(3000);

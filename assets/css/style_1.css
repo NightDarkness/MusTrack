@@ -5,6 +5,13 @@
     font-size: 35px;
 }
 
+.user{
+    position: absolute;
+    display: flex;
+    top: 400px;
+    width: 300px;
+}
+
 .container {
     position: absolute;
     width: 1000px;
