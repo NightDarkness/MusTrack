@@ -7,6 +7,7 @@ function reload_content(delay){
     setInterval(async function(){
 
         let user = document.getElementsByTagName('input')[0].value;
+        //console.log(user);
         let url = 'https://api.listenbrainz.org/1/user/' + user + '/playing-now';
 
         let payload = new Map();
@@ -23,10 +24,16 @@ function reload_content(delay){
             console.log('Error loading content');
         }
         if(response.status === 200){
-            document.getElementsByTagName('p')[2].innerText = '✅';
+            document.getElementsByTagName('p')[2].innerText = '✔';
             data = await response.text();
             jsonRAW = JSON.parse(data);
             jsonFile = new Map(Object.entries(jsonRAW));
+
+            /*try{
+                console.log(jsonFile.get('payload')['listens'][0]['track_metadata']);
+            }catch{
+                console.log(jsonFile.get('payload')['listens'][0]);
+            }*/
 
             if(jsonFile.get('payload')['listens'].length > 0){
 
@@ -45,6 +52,7 @@ function reload_content(delay){
         }else{
             document.getElementsByTagName('p')[2].innerText = '❌';
         }
+        //console.log(response.status);
 
         if(song['img_id'] != document.getElementsByTagName('img')[0].getAttribute('id')){
             
