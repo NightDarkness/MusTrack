@@ -1,8 +1,3 @@
-var unicode = document.createElement('meta');
-
-unicode.setAttribute('charset','utf-8');
-document.getElementsByTagName('head')[0].appendChild(unicode);
-
 var styles = document.createElement('link');
 
 styles.setAttribute('rel','stylesheet');
@@ -52,6 +47,8 @@ function reload_content(url, delay){
             document.getElementsByTagName('img')[0].setAttribute('src','https://img.youtube.com/vi/' + song['img_id'] + '/maxresdefault.jpg');
             
             document.getElementsByTagName('img')[1].setAttribute('src','https://img.youtube.com/vi/' + song['img_id'] + '/maxresdefault.jpg');
+
+            await sleep(250);
 
             document.getElementsByTagName('p')[0].innerText = song['track_name'];
             document.getElementsByTagName('p')[1].innerText = song['artist_name'];
