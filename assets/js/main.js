@@ -6,7 +6,7 @@ function reload_content(delay){
 
     setInterval(async function(){
 
-        let user = document.getElementsByTagName('input')[0].value;
+        let user = await (await fetch('../../account.dat')).text();
         //console.log(user);
         let url = 'https://api.listenbrainz.org/1/user/' + user + '/playing-now';
 
@@ -14,17 +14,13 @@ function reload_content(delay){
         let song = {'artist_name':'NO SONG', 'track_name':'Youtube Music Tracker', 'img_link':'assets/img/logo.png', 'img_id':'none'};
         let link;
         let id;
-        let response
+        let response = await fetch(url);
         let data;
         let jsonRAW;
         let jsonFile;
-        try{
-            response = await fetch(url);
-        }catch{
-            console.log('Error loading content');
-        }
+            
         if(response.status === 200){
-            document.getElementsByTagName('p')[2].innerText = '✔';
+            document.getElementsByTagName('p')[2].innerText = 'user: ✅';
             data = await response.text();
             jsonRAW = JSON.parse(data);
             jsonFile = new Map(Object.entries(jsonRAW));
@@ -50,7 +46,7 @@ function reload_content(delay){
                 
             }
         }else{
-            document.getElementsByTagName('p')[2].innerText = '❌';
+            document.getElementsByTagName('p')[2].innerText = 'user: ❌';
         }
         //console.log(response.status);
 
