@@ -1,9 +1,3 @@
-var styles = document.createElement('link');
-
-styles.setAttribute('rel','stylesheet');
-styles.setAttribute('href','assets/css/style_1.css');
-document.getElementsByTagName('head')[0].appendChild(styles);
-
 let api = 'https://api.listenbrainz.org/1/user/nightd/playing-now';
 
 function sleep(ms) {
