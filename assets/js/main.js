@@ -34,7 +34,7 @@ function reload_content(url, delay){
             
 
         }else{
-            song = {'artist_name':'Youtube Music Tracker', 'track_name':'NO SONG', 'img_link':'assets/img/yt.png', 'img_id':'none'};
+            song = {'artist_name':'NO SONG', 'track_name':'Youtube Music Tracker', 'img_link':'assets/img/yt.png', 'img_id':'none'};
         }
         
 
