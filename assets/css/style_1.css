@@ -83,10 +83,11 @@
 
 .animation-in{
     animation: in 1s;
+    width: 0px;
 }
 
 .animation-out{
-    animation: out 1s;
+    animation: out 1s;;
 }
 
 @keyframes in {
