@@ -7,40 +7,53 @@ function sleep(ms) {
 function reload_content(url, delay){
 
     setInterval(async function(){
-        let response = await fetch(url);
-        let data = await response.text();
-        let jsonRAW = JSON.parse(data);
-        let jsonFile = new Map(Object.entries(jsonRAW));
+
         let payload = new Map();
         let song = new Map();
         let link;
         let id;
+        let response = await fetch(url);
+        let data = await response.text();
+        let jsonRAW = JSON.parse(data);
+        let jsonFile = new Map(Object.entries(jsonRAW));
 
-        payload = jsonFile.get('payload');
-        song = payload['listens'][0]['track_metadata'];
-        id = payload['listens'][0]['track_metadata']['additional_info']['origin_url'];
-        id = id.substr(0,45);
-        id = id.substr(34,45);
-        link = 'https://img.youtube.com/vi/' + id + '/maxresdefault.jpg'
-        song['img_id'] = id;
-        song['img_link'] = link;
+        
 
-        console.log(data);
-        //console.log(document.getElementsByTagName('img')[0].getAttribute('src'));
+        if(jsonFile.get('payload')['listens'].length > 0){
 
-        if(link != document.getElementsByTagName('img')[0].getAttribute('src')){
+            payload = jsonFile.get('payload');
+            id = payload['listens'][0]['track_metadata']['additional_info']['origin_url'];
+            id = id.substr(0,45);
+            id = id.substr(34,45);
+            link = 'https://img.youtube.com/vi/' + id + '/maxresdefault.jpg'
+            
+            song = payload['listens'][0]['track_metadata'];
+            song['img_id'] = id;
+            song['img_link'] = link;
+            data = '';
+            
+
+        }else{
+            song = {'artist_name':'Youtube Music Tracker', 'track_name':'NO SONG', 'img_link':'assets/img/yt.png', 'img_id':'none'};
+        }
+        
+
+        try{
+            console.log(jsonFile.get('payload')['listens'][0]['track_metadata']);
+        }catch{
+            console.log(jsonFile.get('payload')['listens'][0]);
+        }
+
+        if(song['img_id'] != document.getElementsByTagName('img')[0].getAttribute('id')){
             
             document.getElementsByTagName('div')[3].setAttribute('class', 'info animation-in');
-            //await sleep(1000);
             document.getElementsByTagName('div')[2].setAttribute('class', 'frame animation-in');
-
-            //document.getElementsByTagName('div')[3].style.animation = 'in';
 
             await sleep(1000);
 
-            document.getElementsByTagName('img')[0].setAttribute('src','https://img.youtube.com/vi/' + song['img_id'] + '/maxresdefault.jpg');
-            
-            document.getElementsByTagName('img')[1].setAttribute('src','https://img.youtube.com/vi/' + song['img_id'] + '/maxresdefault.jpg');
+            document.getElementsByTagName('img')[0].setAttribute('src',song['img_link']);
+            document.getElementsByTagName('img')[0].setAttribute('id',song['img_id']);
+            document.getElementsByTagName('img')[1].setAttribute('src',song['img_link']);
 
             await sleep(250);
 
@@ -59,9 +72,7 @@ function reload_content(url, delay){
             }
 
             document.getElementsByTagName('div')[2].setAttribute('class', 'frame animation-out');
-            //await sleep(1000);
             document.getElementsByTagName('div')[3].setAttribute('class', 'info animation-out');
-            //document.getElementsByClassName('info')[3].style. 
 
         }
 
