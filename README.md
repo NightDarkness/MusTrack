@@ -5,6 +5,11 @@ Hello! c:
 Youtube music tracker is a small and powerful app to track the music we listen to from youtube music while we stream.
 
 At the moment of this publication, it only supports the youtube music platform, but depending on the support for the application, it may be expanded in the future to support other platforms and even add more styles for the viewer.
+
+# Requirements
+
+1) [ListenBrainz](https://listenbrainz.org/) account.
+2) [Web Scrobbler](https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm?hl=en) installed.
 # Instructions
 
 1) Create an account on [ListenBrainz](https://listenbrainz.org/)
