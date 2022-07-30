@@ -14,9 +14,10 @@ At the moment of this publication, it only supports the youtube music platform, 
 # Instructions
 
 1) Create an account on [ListenBrainz](https://listenbrainz.org/)
-2) Run the Account Manager App.
-3) Enter your username in the text box and press the check button (It must be exactly the same as it appears in [ListenBrainz](https://listenbrainz.org/)).
-4) Copy the directory of the index.html in a browser type source in OBS.
+2) Link your ListenBrainz account to Web Scrobbler app.
+3) Run the Account Manager App.
+4) Enter your username in the text box and press the check button (It must be exactly the same as it appears in [ListenBrainz](https://listenbrainz.org/)).
+5) Copy the directory of the index.html in a browser type source in OBS.
 ### Enjoy!
 
 ### Note
