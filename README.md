@@ -10,6 +10,7 @@ At the moment of this publication, it only supports the youtube music platform, 
 
 1) [ListenBrainz](https://listenbrainz.org/) account.
 2) [Web Scrobbler](https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm?hl=en) installed.
+3) ListenBrainz account linked to Web Scrobbler app.
 # Instructions
 
 1) Create an account on [ListenBrainz](https://listenbrainz.org/)
