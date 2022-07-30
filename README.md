@@ -1,6 +1,6 @@
 Hello! c:
 
-#Youtube Music Tracker
+# Youtube Music Tracker
 
 Youtube music tracker is a small and powerful app to track the music we listen to from youtube music while we stream.
 
