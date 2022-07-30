@@ -18,7 +18,7 @@ At the moment of this publication, it only supports the youtube music platform, 
 **If you detect any problem with the program or have comments about it, you can let me know in the [issues](https://github.com/NIghtDarkness/Music_Tracker/issues) section or send me an email here (temporarily disabled).**
 
 
-**Pro Tip: if you install an Apache server and upload the program you can have a local ip in case you stream with 2 PCs.**
+**Pro Tip: if you install an [Apache Server](https://httpd.apache.org/download.cgi) and upload the program you can have a local ip in case you stream with 2 PCs.**
 
 # Download
 
