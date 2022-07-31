@@ -1,10 +1,10 @@
 Hello! c:
 
-# Youtube Music Tracker
+# Music Tracker
 
-Youtube music tracker is a small and powerful app to track the music we listen to from youtube music while we stream.
+Music tracker is a small and powerful app to track the music we listen to from Youtube Music and Spotify while we stream.
 
-At the moment of this publication, it only supports the youtube music platform, but depending on the support for the application, it may be expanded in the future to support other platforms and even add more styles for the viewer.
+At the moment of this publication, it only supports the youtube music an spotify platforms, but depending on the support for the application, it may be expanded in the future to support other platforms and even add more styles for the viewer.
 
 # Requirements
 
