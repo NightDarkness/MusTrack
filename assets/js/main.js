@@ -1,7 +1,7 @@
 // Spotify API credentials
 
-const spotifyClientID = '0d56ba1ca5b844b7886a93fe3c371e20';
-const spotifyClientSecret = '4a910c568b2b4f9796426f7749a3065f';
+const spotifyClientID = '';
+const spotifyClientSecret = '';
 
 const getToken = async () => {
     const request = await fetch('https://accounts.spotify.com/api/token', {
