@@ -1,5 +1,6 @@
 // Spotify API credentials
 
+/*
 const spotifyClientID = '';
 const spotifyClientSecret = '';
 
@@ -30,6 +31,8 @@ const getTrack = async (token, id) => {
 
 }
 
+*/
+
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -40,7 +43,6 @@ function reload_content(delay){
     setInterval(async function(){
 
         let user = await (await fetch('../../account.dat')).text();
-        //console.log(user);
         let url = 'https://api.listenbrainz.org/1/user/' + user + '/playing-now';
 
         let payload = new Map();
@@ -58,17 +60,6 @@ function reload_content(delay){
             jsonRAW = JSON.parse(data);
             jsonFile = new Map(Object.entries(jsonRAW));
 
-            //console.log(getTrack(token, '5HCyWlXZPP0y6Gqq8TgA20'));
-            //console.log(jsonFile);
-            //console.log(getToken());
-            getToken();
-
-            /*try{
-                console.log(jsonFile.get('payload')['listens'][0]['track_metadata']);
-            }catch{
-                console.log(jsonFile.get('payload')['listens'][0]);
-            }*/
-
             if(jsonFile.get('payload')['listens'].length > 0){
 
                 payload = jsonFile.get('payload');
@@ -77,10 +68,7 @@ function reload_content(delay){
 
                     id = payload['listens'][0]['track_metadata']['additional_info']['origin_url'];
                     id = id.substr(31,100);
-                    link = '/assets/img/logo.png';
-
-                    console.log(id)
-                    //console.log(getTrack(getToken(), id));
+                    link = 'assets/img/spotify.png';
 
                 }else{
 
