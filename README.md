@@ -2,7 +2,7 @@ Hello! c:
 
 # Music Tracker
 
-Music tracker is a small and powerful app to track the music we listen to from Youtube Music and Spotify while we stream.
+MusTrack is a small and powerful app to track the music we listen to from Youtube Music and Spotify while we stream.
 
 At the moment of this publication, it only supports the youtube music an spotify platforms, but depending on the support for the application, it may be expanded in the future to support other platforms and even add more styles for the viewer.
 
