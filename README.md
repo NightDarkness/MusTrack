@@ -17,7 +17,7 @@ At the moment of this publication, it only supports the youtube music an spotify
 
 1) Create an account on [ListenBrainz](https://listenbrainz.org/).
 2) Link your ListenBrainz account to Web Scrobbler app.
-3) Copy this [link](https://nightdarkness.github.io/Music_Tracker/) and paste in a browser type source in OBS.
+3) Copy this [link](https://nightdarkness.github.io/MusTrack/) and paste in a browser type source in OBS.
 4) In OBS press the interact button and add your ListenBrainz user.
 
 ## Local install
