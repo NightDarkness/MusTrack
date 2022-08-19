@@ -22,9 +22,6 @@ function reload_content(delay) {
         response = await fetch(url);
 
         if (response.status === 200) {
-            document.getElementsByTagName("div")[18].innerText = "✅";
-            document.getElementsByTagName("div")[25].innerText = "PASS!";
-            document.getElementsByTagName("div")[25].style.color = "green";
 
             data = await response.json();
 
@@ -47,7 +44,6 @@ function reload_content(delay) {
             }
 
         } else {
-            document.getElementsByTagName("div")[18].innerText = "❌";
             if (user != "") {
                 song = {
                     artist_name: "NO SONG - " + user,
