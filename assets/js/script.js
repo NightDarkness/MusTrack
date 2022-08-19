@@ -4,8 +4,12 @@ function sleep(ms) {
 
 function reload_content(delay) {
     setInterval(async function () {
-        let user = document.getElementsByTagName("input")[0].value,
-            key = document.getElementsByTagName("input")[1].value,
+
+        let response = await fetch("account.dat");
+        let accdata = await response.json();
+
+        let user = accdata["user"],
+            key = accdata["key"],
             url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=" + key + "&limit=1&format=json",
             link,
             data,
@@ -15,7 +19,7 @@ function reload_content(delay) {
                 img_link: "assets/img/logo.png"
             };
 
-        let response = await fetch(url);
+        response = await fetch(url);
 
         if (response.status === 200) {
             document.getElementsByTagName("div")[18].innerText = "✅";
