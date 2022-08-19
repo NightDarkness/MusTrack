@@ -4,74 +4,34 @@ Hello! c:
 
 MusTrack is a small and powerful app to track the music we listen to from Youtube Music and Spotify while we stream.
 
-At the moment of this publication, it only supports the youtube music an spotify platforms, but depending on the support for the application, it may be expanded in the future to support other platforms and even add more styles for the viewer.
-
 # Requirements
 
-1) [ListenBrainz](https://listenbrainz.org/) account.
+1) [LastFM](https://www.last.fm/es/) account.
 2) [Web Scrobbler](https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm?hl=en) installed.
-3) ListenBrainz account linked to Web Scrobbler app.
+3) [LastFM API Account](https://www.last.fm/api/account/create).
+
 # Instructions
 
-## WebPlugin Online
+## Local Plugin
 
 1) Create an account on [LastFM](https://www.last.fm/es/)
-2) Create an API account [LastFM-API](https://www.last.fm/api/account/create)
+2) Create an API account [LastFM-API](https://www.last.fm/api/account/create) and fill the boxes.
+
     ![API Instructions](/images/lastfmapi.png)
-3) Link your ListenBrainz account to Web Scrobbler app.
-4) Copy this [link](https://nightdarkness.github.io/MusTrack/) and paste in a browser type source in OBS.
-5) In OBS press the interact button and add your ListenBrainz user.
 
-## Local install
 
-1) Create an account on [ListenBrainz](https://listenbrainz.org/)
-2) Link your ListenBrainz account to Web Scrobbler app.
-3) Run the Account Manager App.
-4) Enter your username in the text box and press the check button (It must be exactly the same as it appears in [ListenBrainz](https://listenbrainz.org/)).
-5) Copy the directory of the index.html in a browser type source in OBS.
+3) Open Account Manager.exe and register your account and API key.
+4) Link your LastFM account to Web Scrobbler app or LastFM scrobbler.
+5) Copy this "https://logalhost" and paste in a browser type source in OBS (without quotation marks).
 
 ### Enjoy!
 
 ### Note
 
-**If you detect any problem with the program or have comments about it, you can let me know in the [issues](https://github.com/NIghtDarkness/Music_Tracker/issues) section or send me an email here (temporarily disabled).**
-
-
-**Pro Tip: if you install an [Apache Server](https://httpd.apache.org/download.cgi) and upload the program you can have a local ip in case you stream with 2 PCs.**
+**If you detect any problem with the program or have comments about it, you can let me know in the [issues](https://github.com/NIghtDarkness/MusTrack/issues) section or send me an email here: alfonso_lozano_p@outlook.com.**
 
 # Download
 
-[Releases](https://github.com/NIghtDarkness/Music_Tracker/releases)
+[Releases](https://github.com/NIghtDarkness/MusTrack/releases)
 
 _Coded by NightDarkness c:_
-
-Hello! c:
-
-# Youtube Music Tracker
-
-Youtube music tracker is a small and powerful app to track the music we listen to from youtube music while we stream.
-
-# Instructions
-
-1) Create an account on [LastFM](https://www.last.fm/es/)
-2) Create an API account [LastFM-API](https://www.last.fm/api/account/create)
-    ![API Instructions](/images/lastfmapi.png)
-
-3) Run the Account Manager App.
-4) Enter your username in the text box and press the check button (It must be exactly the same as it appears in [LastFM](https://www.last.fm/es/)).
-5) Copy the directory of the index.html in a browser type source in OBS.
-
-### Enjoy
-
-### Note
-
-**If you detect any problem with the program or have comments about it, you can let me know in the [issues](https://github.com/NIghtDarkness/Music_Tracker/issues) section or send me an email here (temporarily disabled).**
-
-**Pro Tip: if you install an [Apache Server](https://httpd.apache.org/download.cgi) and upload the program you can have a local ip in case you stream with 2 PCs.**
-
-# Download
-
-[Releases](https://github.com/NIghtDarkness/Music_Tracker/releases)
-
-_Coded by NightDarkness c:_
-
