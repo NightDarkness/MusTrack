@@ -5,7 +5,7 @@ function sleep(ms) {
 function reload_content(delay) {
     setInterval(async function () {
 
-        let response = await fetch("account.dat");
+        let response = await fetch("account.json", { mode: 'no-cors' });
         let accdata = await response.json();
 
         let user = accdata["user"],
