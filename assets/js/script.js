@@ -25,11 +25,13 @@ function reload_content(delay) {
 
             data = await response.json();
 
+            console.log(data);
+
             song["artist_name"] = data["recenttracks"]["track"][0]["artist"]["#text"];
             song["track_name"] = data["recenttracks"]["track"][0]["name"];
             song["img_link"] = data["recenttracks"]["track"][0]["image"][3]["#text"];
 
-            if (song["img_link"] === "https://lastfm.freetls.fastly.net//i//u//300x300//2a96cbd8b46e442fc41c2b86b821562f.png" || song["img_link"] === "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png") {
+            if (song["img_link"] === "https://lastfm.freetls.fastly.net//i//u//300x300//2a96cbd8b46e442fc41c2b86b821562f.png" || song["img_link"] === "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png" || song["img_link"] === "") {
 
                 response = await fetch("http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=" + user + "&api_key=" + key + "&format=json");
                 data = await response.json();
