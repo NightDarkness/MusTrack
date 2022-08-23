@@ -61,7 +61,7 @@ function reload_content(delay) {
 
         if (
             song["artist_name"] !=
-            document.getElementsByTagName("div")[9].innerText &&
+            document.getElementsByTagName("div")[9].textContent &&
             song["artist_name"] != null
         ) {
             document
@@ -82,15 +82,15 @@ function reload_content(delay) {
 
             await sleep(250);
 
-            document.getElementsByTagName("div")[7].innerText = song["track_name"];
-            document.getElementsByTagName("div")[9].innerText = song["artist_name"];
+            document.getElementsByTagName("div")[7].textContent = song["track_name"];
+            document.getElementsByTagName("div")[9].textContent = song["artist_name"];
 
             if (song["track_name"].length > 28) {
                 document
                     .getElementsByTagName("div")[7]
                     .setAttribute("class", "text-animation");
             } else {
-                document.getElementsByTagName("div")[7].innerText = song["track_name"];
+                document.getElementsByTagName("div")[7].textContent = song["track_name"];
                 document.getElementsByTagName("div")[7].setAttribute("class", "");
             }
 
