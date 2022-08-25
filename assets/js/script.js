@@ -11,7 +11,6 @@ function reload_content(delay) {
         let user = accdata["user"],
             key = accdata["key"],
             url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" + user + "&api_key=" + key + "&limit=1&format=json",
-            link,
             data,
             song = {
                 artist_name: "NO SONG - " + user,
