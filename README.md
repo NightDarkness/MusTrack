@@ -7,7 +7,7 @@ MusTrack is a small and powerful app to track the music we listen to from Youtub
 # Requirements
 
 1) [ListenBrainz](https://listenbrainz.org/) account.
-2) [Web Scrobbler](https://chrome.google.com/webstore/detail/web-scrobbler/hhinaapppaileiechjoiifaancjggfjm?hl=en) installed.
+2) [Web Scrobbler](https://web-scrobbler.com/) installed.
 
 # Instructions
 
