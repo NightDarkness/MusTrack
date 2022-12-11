@@ -13,8 +13,9 @@ MusTrack is a small and powerful app to track the music we listen to from Youtub
 
 ## Web Plugin
 
-1) Open [MusTrack](https://nightdarkness.github.io/MusTrack/) web page.
-2) At the end of the link add your listenbrainz user. Example https://nightdarkness.github.io/MusTrack/?user=YOUR_USER
+1) Install [Web Scrobbler](https://web-scrobbler.com/) and link your [ListenBrainz](https://listenbrainz.org/) Account.
+2) Open [MusTrack](https://nightdarkness.github.io/MusTrack/) web page.
+3) At the end of the link add your listenbrainz user. Example https://nightdarkness.github.io/MusTrack/?user=YOUR_USER
 
 
 ### Enjoy!
