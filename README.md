@@ -6,16 +6,17 @@ MusTrack is a small and powerful app to track the music we listen to from Youtub
 
 # Requirements
 
-1) [ListenBrainz](https://listenbrainz.org/) account.
-2) [Web Scrobbler](https://web-scrobbler.com/) installed.
+1) [LastFM](https://www.last.fm/) account.
+2) [LastFM API Key](https://www.last.fm/api/account/create/).
+3) [Web Scrobbler](https://web-scrobbler.com/) installed.
 
 # Instructions
 
 ## Web Plugin
 
-1) Install [Web Scrobbler](https://web-scrobbler.com/) and link your [ListenBrainz](https://listenbrainz.org/) Account.
-2) Open [MusTrack](https://nightdarkness.github.io/MusTrack/?user=YOUR_USER) web page.
-3) At the end of the link add your listenbrainz user. Example https://nightdarkness.github.io/MusTrack/?user=YOUR_USER
+1) Install [Web Scrobbler](https://web-scrobbler.com/) and link your [LastFM](https://www.last.fm/) Account.
+2) Open [MusTrack](https://nightdarkness.github.io/MusTrack/?user=YOUR_USER&api_key=YOUR_API_KEY) web page.
+3) Fill user and api_key fields. Example https://nightdarkness.github.io/MusTrack/?user=YOUR_USER&api_key=YOUR_API_KEY
 4) Copy this link to your obs source and it's done!
 
 
