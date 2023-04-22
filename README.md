@@ -2,7 +2,7 @@
 
 MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamos en tiempo real!
 
-# Requisitos
+## Requisitos
 
 1) Cuenta en [LastFM](https://www.last.fm/).
 2) Una [API Key](https://www.last.fm/api/account/create/) de LastFM.
@@ -13,7 +13,7 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
 
 1) Crear nuestra cuenta en [LastFM](https://www.last.fm/), obtener nuestra [API Key](https://www.last.fm/api/account/create/) y descargar e instalar [Python 3.11](https://www.python.org/).
 2) Descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
-3) Descomprimir el contenido del .zip en la ubicacion deseada.
+3) Descomprimir el contenido del .7z en la ubicacion deseada.
 4) Ejecurar instalador.exe
 5) Una vez la aplicacion termine de instalar las dependencias abriremos Mustrack.exe.
    La aplicacion se iniciara NO DEBEMOS CERRAR EL CMD/TERMINAL de lo contrario la aplicacion se cerrara.
@@ -37,7 +37,7 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
     pip install "uvicorn[standard]"
     ```
 3) Clonar el repositorio o descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
-4) Descomprimir el contenido del .zip en la ubicacion deseada.
+4) Descomprimir el contenido del .7z en la ubicacion deseada.
 5) Una vez en la carpeta contenedora abrimos un CMD/Terminal e iniciamos la aplicacion con elsiguiente comando:
     ```
     uvicorn index:app --reload --port 80
