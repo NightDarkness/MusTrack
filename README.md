@@ -15,7 +15,7 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
 1) Descargar e instalar [Python 3.11](https://www.python.org/).
 2) Descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
 3) Descomprimir el contenido del .zip en la ubicacion deseada.
-4) Ejecurat instalador.exe
+4) Ejecurar instalador.exe
 5) Una vez la aplicacion termine de instalar las dependencias abriremos Mustrack.exe.
    La aplicacion se iniciara NO DEBEMOS CERRAR EL CMD/TERMINAL de lo contrario la aplicacion se cerrara.
 6) Copiaremos la siguiente direccion en una nueva fuente de navegador en OBS (o su herramienta de transmision de eleccion):
