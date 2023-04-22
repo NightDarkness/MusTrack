@@ -9,8 +9,6 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
 3) Un [Web Scrobbler](https://web-scrobbler.com/) instalado.
 4) [Python 3.11](https://www.python.org/).
 
-#Instrucciones
-
 ## Instalacion Automatica.
 
 1) Crear nuestra cuenta en [LastFM](https://www.last.fm/), obtener nuestra [API Key](https://www.last.fm/api/account/create/) y descargar e instalar [Python 3.11](https://www.python.org/).
