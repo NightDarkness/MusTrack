@@ -2,28 +2,47 @@ Hello! c:
 
 # Music Tracker
 
-MusTrack is a small and powerful app to track the music we listen to from Youtube, Youtube Music, Spotify, and SoundCloud while we stream.
+MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamos en tiempo real!
 
-# Requirements
+# Requisitos
 
-1) [LastFM](https://www.last.fm/) account.
-2) [LastFM API Key](https://www.last.fm/api/account/create/).
-3) [Web Scrobbler](https://web-scrobbler.com/) installed.
+1) Cuenta en [LastFM](https://www.last.fm/).
+2) Una [API Key](https://www.last.fm/api/account/create/) de LastFM.
+3) Un [Web Scrobbler](https://web-scrobbler.com/) instalado.
 
-# Instructions
+# Instrucciones.
 
-## Web Plugin
+1) Descargar e instalar [Python 3.11](https://www.python.org/).
+2) Una vez python instalado debemos instalar algunas dependencias, solo copia y pega los siguientes comandos en un CMD/Terminal.
+    ```
+    $ pip install jinja2
+    ```
+    ```
+    $ pip install fastapi
+    ```
+    ```
+    $ pip install "uvicorn[standard]"
+    ```
+3) Clonar el repositorio o descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
+4) Descomprimir el contenido del .zip en la ubicacion deseada.
+5) Una vez en la carpeta contenedora abrimos un CMD/Terminal e iniciamos la aplicacion con elsiguiente comando:
+    ```
+    $ uvicorn index:app --reload --port 80
+    ```
+   la aplicacion se iniciara NO DEBEMOS CERRAR EL CMD/TERMINAL de lo contrario la aplicacion se cerrara.
+6) Copiaremos la siguiente direccion en una nueva fuente de navegador en OBS (o su herramienta de transmision de eleccion):
+    ```
+    http://127.0.0.1/?user=USERNAME&api_key=YOURAPIKEY
+    ```
 
-1) Install [Web Scrobbler](https://web-scrobbler.com/) and link your [LastFM](https://www.last.fm/) Account.
-2) Open [MusTrack](https://nightdarkness.github.io/MusTrack/?user=YOUR_USER&api_key=YOUR_API_KEY) web page.
-3) Fill user and api_key fields. Example https://nightdarkness.github.io/MusTrack/?user=YOUR_USER&api_key=YOUR_API_KEY
-4) Copy this link to your obs source and it's done!
 
+### LISTO!
 
-### Enjoy!
+Siempre que quieras utilizar de nuevo la aplicacion solo tienes que hacer el paso numero 5
+Para cerrar la aplicacion basta con precionar Ctrl + C en el CMD/Terminal.
 
-### Note
+### Nota
 
-**If you detect any problem with the program or have comments about it, you can let me know in the [issues](https://github.com/NIghtDarkness/MusTrack/issues) section or send me an email here: alfonso_lozano_p@outlook.com.**
+**Si tienes algun problema o encuentras algun bug puedes hacermelo saber en la seccion de [issues](https://github.com/NIghtDarkness/MusTrack/issues)
 
 _Coded by NightDarkness c:_
