@@ -10,7 +10,21 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
 2) Una [API Key](https://www.last.fm/api/account/create/) de LastFM.
 3) Un [Web Scrobbler](https://web-scrobbler.com/) instalado.
 
-# Instrucciones.
+# Instalacion Automatica.
+
+1) Descargar e instalar [Python 3.11](https://www.python.org/).
+2) Descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
+3) Descomprimir el contenido del .zip en la ubicacion deseada.
+4) Ejecurat instalador.exe
+5) Una vez la aplicacion termine de instalar las dependencias abriremos Mustrack.exe.
+   La aplicacion se iniciara NO DEBEMOS CERRAR EL CMD/TERMINAL de lo contrario la aplicacion se cerrara.
+6) Copiaremos la siguiente direccion en una nueva fuente de navegador en OBS (o su herramienta de transmision de eleccion):
+    ```
+    http://127.0.0.1/?user=USERNAME&api_key=YOURAPIKEY
+    ```
+    NOTA: debes rellenar con tu informacion el apartado de USERNAME y YOURAPIKEY con tu propio usuario y api key (solo es aclaracion).
+
+# Instalacion manual.
 
 1) Descargar e instalar [Python 3.11](https://www.python.org/).
 2) Una vez python instalado debemos instalar algunas dependencias, solo copia y pega los siguientes comandos en un CMD/Terminal.
@@ -34,7 +48,8 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
     ```
     http://127.0.0.1/?user=USERNAME&api_key=YOURAPIKEY
     ```
-
+    NOTA: debes rellenar con tu informacion el apartado de USERNAME y YOURAPIKEY con tu propio usuario y api key (solo es aclaracion).
+    
 
 ### LISTO!
 
