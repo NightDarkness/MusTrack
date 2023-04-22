@@ -14,6 +14,7 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
 ## Instalacion Automatica.
 
 1) Crear nuestra cuenta en [LastFM](https://www.last.fm/), obtener nuestra [API Key](https://www.last.fm/api/account/create/) y descargar e instalar [Python 3.11](https://www.python.org/).
+      ![API_Key](/assets/img/API.png)
 2) Descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
 3) Descomprimir el contenido del .7z en la ubicacion deseada.
 4) Ejecurar instalador.exe
@@ -28,6 +29,7 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
 ## Instalacion manual.
 
 1) Crear nuestra cuenta en [LastFM](https://www.last.fm/), obtener nuestra [API Key](https://www.last.fm/api/account/create/) y descargar e instalar [Python 3.11](https://www.python.org/).
+      ![API_Key](/assets/img/API.png)
 2) Una vez python instalado debemos instalar algunas dependencias, solo copia y pega los siguientes comandos en un CMD/Terminal.
     ```
     pip install jinja2
