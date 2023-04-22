@@ -2,6 +2,8 @@
 
 MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamos en tiempo real!
 
+![Mustrack](/assets/img/mustrack.png)
+
 ## Requisitos
 
 1) Cuenta en [LastFM](https://www.last.fm/).
