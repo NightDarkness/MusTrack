@@ -15,19 +15,19 @@ MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamo
 1) Descargar e instalar [Python 3.11](https://www.python.org/).
 2) Una vez python instalado debemos instalar algunas dependencias, solo copia y pega los siguientes comandos en un CMD/Terminal.
     ```
-    $ pip install jinja2
+    pip install jinja2
     ```
     ```
-    $ pip install fastapi
+    pip install fastapi
     ```
     ```
-    $ pip install "uvicorn[standard]"
+    pip install "uvicorn[standard]"
     ```
 3) Clonar el repositorio o descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
 4) Descomprimir el contenido del .zip en la ubicacion deseada.
 5) Una vez en la carpeta contenedora abrimos un CMD/Terminal e iniciamos la aplicacion con elsiguiente comando:
     ```
-    $ uvicorn index:app --reload --port 80
+    uvicorn index:app --reload --port 80
     ```
    la aplicacion se iniciara NO DEBEMOS CERRAR EL CMD/TERMINAL de lo contrario la aplicacion se cerrara.
 6) Copiaremos la siguiente direccion en una nueva fuente de navegador en OBS (o su herramienta de transmision de eleccion):
