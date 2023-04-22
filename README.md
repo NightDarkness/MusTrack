@@ -1,5 +1,3 @@
-Hello! c:
-
 # MusTrack
 
 MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamos en tiempo real!
