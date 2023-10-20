@@ -28,7 +28,8 @@ Now you can scrobble your music in your stream!
 
 ### Note
 
-**Questions in [issues](https://github.com/NIghtDarkness/MusTrack/issues) or DM on Discord: nightdarkness_
-**Also you can join my [Discord Server](https://discord.com/invite/PzNSYnjvrf).
+Questions in [issues](https://github.com/NIghtDarkness/MusTrack/issues) or DM on Discord: nightdarkness_.
+
+Also you can join my [Discord Server](https://discord.com/invite/PzNSYnjvrf).
 
 _Coded by NightDarkness_
