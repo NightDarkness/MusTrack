@@ -1,66 +1,24 @@
 # MusTrack
 
-MusTrack es una aplicacion que permite mostrar en stream la musica que escuchamos en tiempo real!
+MusTrack is a very simple app to scrobble your live music on stream!
 
-![Mustrack](/assets/img/mustrack.png)
+## Requirements
+1) A [ListenBrainz](https://listenbrainz.org/) account.
+2) [Web Scrobbler](https://web-scrobbler.com/) already installed.
 
-## Requisitos
+## Setup without download.
 
-1) Cuenta en [LastFM](https://www.last.fm/).
-2) Una [API Key](https://www.last.fm/api/account/create/) de LastFM.
-3) Un [Web Scrobbler](https://web-scrobbler.com/) instalado.
-4) [Python 3.11](https://www.python.org/).
-
-## Instalacion Automatica.
-
-1) Crear nuestra cuenta en [LastFM](https://www.last.fm/), obtener nuestra [API Key](https://www.last.fm/api/account/create/) y descargar e instalar [Python 3.11](https://www.python.org/).
-      ![API_Key](/assets/img/API.png)
-2) Descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
-3) Descomprimir el contenido del .7z en la ubicacion deseada.
-4) Ejecurar instalador.exe
-5) Una vez la aplicacion termine de instalar las dependencias abriremos Mustrack.exe.
-   La aplicacion se iniciara NO DEBEMOS CERRAR EL CMD/TERMINAL de lo contrario la aplicacion se cerrara.
-6) Copiaremos la siguiente direccion en una nueva fuente de navegador en OBS (o su herramienta de transmision de eleccion):
-    ```
-    http://127.0.0.1/?user=USERNAME&api_key=YOURAPIKEY
-    ```
-    NOTA: debes rellenar con tu informacion el apartado de USERNAME y YOURAPIKEY con tu propio usuario y api key (solo es aclaracion).
-
-## Instalacion manual.
-
-1) Crear nuestra cuenta en [LastFM](https://www.last.fm/), obtener nuestra [API Key](https://www.last.fm/api/account/create/) y descargar e instalar [Python 3.11](https://www.python.org/).
-      ![API_Key](/assets/img/API.png)
-2) Una vez python instalado debemos instalar algunas dependencias, solo copia y pega los siguientes comandos en un CMD/Terminal.
-    ```
-    pip install jinja2
-    ```
-    ```
-    pip install fastapi
-    ```
-    ```
-    pip install "uvicorn[standard]"
-    ```
-3) Clonar el repositorio o descargar la ultima version. Puedes encontarla [aqui](https://github.com/NIghtDarkness/MusTrack/releases).
-4) Descomprimir el contenido del .7z en la ubicacion deseada.
-5) Una vez en la carpeta contenedora abrimos un CMD/Terminal e iniciamos la aplicacion con elsiguiente comando:
-    ```
-    uvicorn index:app --reload --port 80
-    ```
-   la aplicacion se iniciara NO DEBEMOS CERRAR EL CMD/TERMINAL de lo contrario la aplicacion se cerrara.
-6) Copiaremos la siguiente direccion en una nueva fuente de navegador en OBS (o su herramienta de transmision de eleccion):
-    ```
-    http://127.0.0.1/?user=USERNAME&api_key=YOURAPIKEY
-    ```
-    NOTA: debes rellenar con tu informacion el apartado de USERNAME y YOURAPIKEY con tu propio usuario y api key (solo es aclaracion).
+1) open web scrobbler options and link your ListenBrainz account.
+2) Go to [Mustrack](https://mustrack.nightdarkness.com/) webpage and search your ListenBrainz username.
+3) now copy the webpage link and add it on your OBS or streaming tool like a browser media (i recommend a resolution of 800px by 200px).
     
 
-### LISTO!
+### DONE!
 
-Siempre que quieras utilizar de nuevo la aplicacion solo tienes que hacer el paso numero 5
-Para cerrar la aplicacion basta con precionar Ctrl + C en el CMD/Terminal.
+Now you can scrobble your music in your stream!
 
 ### Nota
 
-**Si tienes algun problema o encuentras algun bug puedes hacermelo saber en la seccion de [issues](https://github.com/NIghtDarkness/MusTrack/issues)
+**Questions in [issues](https://github.com/NIghtDarkness/MusTrack/issues) or DM on Discord: nightdarkness_
 
-_Coded by NightDarkness c:_
+_Coded by NightDarkness_
