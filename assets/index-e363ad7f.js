@@ -1,0 +1,8 @@
+(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const r of t.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();async function c(s,o,n,i,e){const t=await fetch(o+n+i);let r=await t.json();if(t.status===200)switch(s){case"song":try{r=r.payload.listens[0].track_metadata}catch{e!==void 0?r=await c("song",o,n,e):r="404"}break}else r="404";return r}async function a(){const s=document.querySelector("#search");await c("default","https://api.listenbrainz.org/1/user/",s.value,"/listens?count=1")!="404"?(s.setAttribute("style","background: rgba(0,255,0,0.2);"),window.location.replace("http://mustrack.nightdarkness.com/App.html?user="+s.value)):(s.setAttribute("style","background: rgba(255,0,0,0.2);"),s.value="",s.setAttribute("placeholder","Invalid User"))}document.querySelector("#app").innerHTML=`
+  <div class='form-container'>
+    <form id='form'>
+        <input type='text' id='search' placeholder='Your UserName'>
+        <button type='button' id='submit'>Search</button>
+    </form>
+  </div>
+`;document.getElementById("submit").addEventListener("click",a);
