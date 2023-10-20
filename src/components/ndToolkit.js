@@ -1,4 +1,4 @@
-import { useFetch } from './useFetch.js'
+import { useFetch } from './useFetch'
 
 export function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));

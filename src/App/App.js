@@ -1,6 +1,6 @@
 import './App.css'
-import { useFetch } from './components/useFetch.js'
-import { update } from './components/ndToolkit.js'
+import { useFetch } from '../components/useFetch.js'
+import { update } from '../components/ndToolkit.js'
 
 const 
     url_values = window.location.search,
