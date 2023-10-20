@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html{
+    width: 800px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-frame{
+    width: 800px;
+    height: 200px;
+    background: rgb(255,255,255 / 0%);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- MUSTRACK DATA --- */
+
+.cover-image{
+    width: 200px;
+    height: 200px;
+    background: #333;
+    border-radius: 7px 0 0 7px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    overflow: hidden;
+    position:absolute;
+    left: 0;
+}
+
+.cover-image > img{
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-data{
+    width: 600px;
+    height: 200px;
+    /*background: rgb(221,221,221);
+    background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%); */
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 0 7px 7px 0;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position:absolute;
+    left:200px;
+}
+
+.text-container{
+    width: 87%;
+    height: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.song-name{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    width:100%;
+    height: 124px;
+}
+
+.spacer{
+    width: 100%;
+    height: 22px;
+    text-align: right;
+}
+
+.song-artist{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    width: 100%;
+    height: 54px;
+}
+
+span{
+    align-self: center;
+    text-align: center;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+span::-webkit-scrollbar {
+    display: none;
+}
+
+#artist{
+    background: #1DAADE;
+    background: -webkit-linear-gradient(to right, #1DAADE 0%, #C53DFF 100%);
+    background: -moz-linear-gradient(to right, #1DAADE 0%, #C53DFF 100%);
+    background: linear-gradient(to right, #1DAADE 0%, #C53DFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* --- ANIMATIONS --- */
+
+.anim-LTR{
+    position: relative;
+    animation: LtoR 20s infinite linear;
+    display: flex;
+    align-self: left;
+}
+
+.anim-IN{
+    animation: IN 1s;
+    width: 0px;
+}
+
+.anim-OUT{
+    animation: OUT 1s;
+}
+
+.anim-disolve{
+    animation: blur ease 2s;
+    -webkit-animation: blur 2s ease 0s;
+    -moz-animation: blur 2s ease 0s;
+}
+
+@keyframes LtoR {
+    0%{
+        left:calc(50%);
+    }
+    50%{
+        left:calc(-50%);
+    }
+    100%{
+        left:calc(50%);
+    }
+}
+
+@keyframes IN {
+    0%{
+        width: 600px;
+    }
+    100%{
+        width: 0px;
+    }
+}
+
+@keyframes OUT {
+    0%{
+        width: 1px;
+    }
+    100%{
+        width: 600px;
+    }
+}
+
+@keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+      }
+    50% {
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+      }
+  }
+  
+  /*filter: blur(3px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: url(blur.svg#blur);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');*/
