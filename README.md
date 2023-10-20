@@ -3,13 +3,13 @@
 MusTrack is a very simple app to scrobble your live music on stream!
 
 ## Requirements
-1) A [ListenBrainz](https://listenbrainz.org/) account.
-2) [Web Scrobbler](https://web-scrobbler.com/) already installed.
+1) A [ListenBrainz](https://listenbrainz.org/){:target="_blank"} account.
+2) [Web Scrobbler](https://web-scrobbler.com/){:target="_blank"} already installed.
 
 ## Setup without download.
 
 1) Open web scrobbler options and link your ListenBrainz account.
-2) Go to [Mustrack](https://mustrack.nightdarkness.com/) webpage and search your ListenBrainz username.
+2) Go to [Mustrack](https://mustrack.nightdarkness.com/){:target="_blank"} webpage and search your ListenBrainz username.
 3) Now copy the webpage link and add it on your OBS or streaming tool like a browser media (i recommend a resolution of 800px by 200px).
     
 
@@ -19,6 +19,6 @@ Now you can scrobble your music in your stream!
 
 ### Nota
 
-**Questions in [issues](https://github.com/NIghtDarkness/MusTrack/issues) or DM on Discord: nightdarkness_
+**Questions in [issues](https://github.com/NIghtDarkness/MusTrack/issues){:target="_blank"} or DM on Discord: nightdarkness_
 
 _Coded by NightDarkness_
