@@ -1,7 +1,12 @@
 import './App.css'
-import { loadSong } from './components/useFetch.js'
+import { useFetch } from './components/useFetch.js'
 import { update } from './components/ndToolkit.js'
 
+const 
+    url_values = window.location.search,
+    url_params = new URLSearchParams(url_values),
+    user = url_params.get("user"),
+    url = 'https://api.listenbrainz.org/1/user/';
 
 let cache = {
     track_name: 'none'
@@ -29,7 +34,7 @@ document.querySelector('#app').innerHTML = `
 function reloadContent(delay){
     setInterval(async () => {
         
-        let song = await loadSong('/playing-now');
+        let song = await useFetch('song', url,  user, '/playing-now', '/listens?count=1');
 
         if(cache['track_name'] == song['track_name'] && cache['artist_name'] == song['artist_name'] && cache['release_name'] == song['release_name']){
             console.log('refreshing');

@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset='UTF-8' />
-    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel='icon' type='image/x-icon' href='favicon.ico' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>Mustrack Vite</title>
+    <title>Mustrack v1.1</title>
   </head>
   <body>
-    <main id='app' class='main-frame'></main>
-    <script type='module' src='/src/App.js'></script>
+    <script type="text/javascript">
+      window.addEventListener("keypress", function(event){
+          if (event.keyCode == 13){
+              event.preventDefault();
+          }
+      }, false);
+
+    </script>
+    <main id='app' class='main-frame home'></main>
+    <script type='module' src='src/components/getUser.js'></script>
   </body>
 </html>

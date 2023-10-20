@@ -1,26 +1,30 @@
-const 
-    url_values = window.location.search,
-    url_params = new URLSearchParams(url_values),
-    user = url_params.get("user"),
-    url = 'https://api.listenbrainz.org/1/user/' + user;
+export async function useFetch(mode, url, user, dir, alterDir){
 
-export async function loadSong(dir){
+    const response = await fetch(url + user + dir);
 
-    const 
-        response = await fetch(url + dir),
-        data = await response.json();
-
-    let song;
+    let data = await response.json();
 
     if(response.status === 200){
 
-        try{
-            song = data['payload']['listens'][0]['track_metadata'];
-        }catch(e){
-            song = await loadSong('/listens?count=1');
+        switch(mode){
+            case 'song':
+                try{
+                    data = data['payload']['listens'][0]['track_metadata'];
+                }catch(e){
+                    if(alterDir !== undefined){
+                        data = await useFetch('song', url, user, alterDir);
+                    }else{
+                        data = '404';
+                    }
+                }
+                break;
+            default:
+                break;
         }
 
+    }else{
+        data = '404';
     }
 
-    return song;
+    return data;
 }
