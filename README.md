@@ -8,9 +8,9 @@ MusTrack is a very simple app to scrobble your live music on stream!
 
 ## Setup without download.
 
-1) open web scrobbler options and link your ListenBrainz account.
+1) Open web scrobbler options and link your ListenBrainz account.
 2) Go to [Mustrack](https://mustrack.nightdarkness.com/) webpage and search your ListenBrainz username.
-3) now copy the webpage link and add it on your OBS or streaming tool like a browser media (i recommend a resolution of 800px by 200px).
+3) Now copy the webpage link and add it on your OBS or streaming tool like a browser media (i recommend a resolution of 800px by 200px).
     
 
 ### DONE!
