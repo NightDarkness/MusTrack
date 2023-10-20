@@ -20,7 +20,11 @@ Watch the setup [video](https://youtu.be/fQeNWUdnffk) on YouTube!
 
 Now you can scrobble your music in your stream!
 
+/// --------------------------------------------------------------------------------------------------------------------- ///
+
 [![](patreon-logo.webp)](https://patreon.com/NightDarkness)
+
+/// --------------------------------------------------------------------------------------------------------------------- ///
 
 ### Nota
 
